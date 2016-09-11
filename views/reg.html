@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> Форма регистрации </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+  <body>
+    <div>
+      <form method='post' enctype='multipart/form-data'
+            action="{{action}}/{{loginVarName}}/{{pwdVarName}}/{{ageVarName}}/{{aboutVarName}}/{{photoVarName}}/{{emailVarName}}">
+        <table>
+          <tr>
+            <td> Login: </td>
+            <td> <input type='text' name="{{loginVarName}}"> </td>
+          </tr>
+
+          <tr>
+            <td>  Password: </td>
+            <td> <input type='text' name="{{pwdVarName}}"> </td>
+          </tr>
+
+          <tr>
+            <td>  Age: </td>
+            <td> <input type='text' name="{{ageVarName}}"> </td>
+          </tr>
+
+          <tr>
+            <td> About: </td>
+            <td> <textarea name="{{aboutVarName}}"> </textarea> </td>
+          </tr>
+
+          <tr>
+            <td>  Photo: </td>
+            <td> <input type='file' name="{{photoVarName}}" accept='image/*'> </td>
+          </tr>
+
+          <tr>
+            <td> E-mail: </td>
+            <td> <input type='text' name="{{emailVarName}}"> </td>
+          </tr>
+
+          <tr>
+            <td>  </td>
+            <td> <input type='submit' value='Зарегистрироваться'> </td>
+          </tr>
+        </table>
+        <div class="g-recaptcha" data-sitekey="6LdXyykTAAAAANUEdo6nkQKQXbTtPWcZJh9r4qOx"></div>
+      </form>
+    </div>
+  </body>
+</html>

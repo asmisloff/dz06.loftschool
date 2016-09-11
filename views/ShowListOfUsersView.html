@@ -1,0 +1,23 @@
+<style>
+  td {
+      text-align: center;
+      padding: 10px;
+      border-style: solid;
+      border-color: #000;
+      border-width: 1px;
+  }
+  tr#header {
+      background-color: lightyellow;
+  }
+</style>
+
+<table>
+  <tr id='header'>
+    <td> Имя </td> <td> Возраст </td> <td> О себе </td> <td> Совершеннолетний </td>
+  </tr>
+  {% for user in lst %}
+      <tr>
+        <td> {{user.Login}} </td> <td> {{user.Age}} </td> <td> {{user.About}} </td> <td> {{user.Meta}} </td>
+     </tr>
+  {% endfor %}
+</table>
