@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Удалить фотографии</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      table tr th {
+      text-align: center;
+      }
+      table tr td {
+      align-content: center;
+      }
+      img {
+      width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="{{action}}" method="POST">
+      <table>
+        <tr>
+          <th>Фотография</th> 
+          <th>Удалить</th>
+        </tr>
+        {% for fn in photos %}
+        <tr>
+          <td> <img src="../photos/{{fn}}" alt="{{fn}}"/> </td>
+          <td> <input type="checkbox" 
+                      name="{{fn}}_cb" value="on" /> </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <input type="submit" value="Удалить отмеченные" name="deleteSelectedBtn" />
+    </form>
+  </body>
+</html>
+

@@ -101,4 +101,9 @@ class HT4Model {
         return $this->con->query($q);
     }
 
+    public function deletePhoto($login, $filename) {
+	$q = "DELETE FROM `photos` WHERE `NAME` = '$login' AND `FILENAME` = '$filename'";
+	return $this->con->query($q);
+    }
+
 }
